@@ -25,3 +25,6 @@ Route::get('/students',function(){
 Route::get('/student/create',function(){
 	return view('students.create');
 });
+Route::get('/student/show',function(){
+	return view('students.show');
+});
