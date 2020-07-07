@@ -13,6 +13,7 @@
 	
 
 	<div class="wrap shadow">
+		<a href="{{ url('/students') }}" class="btn btn-sm btn-success">All Students</a>
 		<div class="card">
 			<div class="card-header">
 				Profile Of - <b>Iftekhar Mahmud</b>

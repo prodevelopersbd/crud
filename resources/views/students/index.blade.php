@@ -13,6 +13,7 @@
 	
 
 	<div class="wrap-table shadow">
+		<a href="{{ url('/student/create') }}" class="btn btn-sm btn-success">Add New Student</a>
 		<div class="card">
 			<div class="card-body">
 				<h2>All Students</h2>
