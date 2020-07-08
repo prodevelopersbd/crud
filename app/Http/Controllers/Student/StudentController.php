@@ -10,7 +10,11 @@ class StudentController extends Controller
 {
 	// Showing All Students Data
     public function index(){
-    	return view('students.index');
+
+    	$all_data =  Student::latest()->get();
+    	return view('students.index',[
+    		'all_students'		=> $all_data,
+    	]);
     }
 	// Add New Student
     public function create(){
