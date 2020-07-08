@@ -38,7 +38,7 @@
 								<td>{{ $single_student -> cell }}</td>
 								<td><img src="{{ URL::to('') }}/public/media/students/{{ $single_student -> photo }}" alt=""></td>
 								<td>
-									<a class="btn btn-sm btn-info" href="#">View</a>
+									<a class="btn btn-sm btn-info" href="{{ url('/student/view') }}/{{ $single_student -> id  }}">View</a>
 									<a class="btn btn-sm btn-warning" href="#">Edit</a>
 									<a class="btn btn-sm btn-danger" href="#">Delete</a>
 								</td>

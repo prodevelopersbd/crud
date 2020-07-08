@@ -51,4 +51,13 @@ class StudentController extends Controller
 
     	return redirect() -> back()->with('success','Student added successfully!!');
     }
+
+    // Showing single student data
+    public function view($id){
+
+    	$single_student_data = Student::findOrFail($id);
+
+    	return view('students.show',compact('single_student_data'));
+
+    }
 }

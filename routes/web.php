@@ -36,5 +36,6 @@ Route::group(['namespace'=> 'Student'] , function(){
 	Route::get('/student','StudentController@index');
 	Route::get('/student/create','StudentController@create');
 	Route::post('/student/submit','StudentController@submit');
+	Route::get('/student/view/{id}','StudentController@view');
 
 });

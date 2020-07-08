@@ -16,27 +16,27 @@
 		<a href="{{ url('/student') }}" class="btn btn-sm btn-success">All Students</a>
 		<div class="card">
 			<div class="card-header">
-				Profile Of - <b>Iftekhar Mahmud</b>
+				Profile Of - <b>{{ $single_student_data -> name  }}</b>
 			</div>
 			<div class="card-body">
-				<img class="shadow" style="width: 200px;height: 200px;border-radius: 50%;border: 10px solid #fff;display: block;margin: auto;" src="{{ URL::to('public/assets/media/img/pp_photo/woman-crop.jpg') }}" alt="">
+				<img class="shadow" style="width: 200px;height: 200px;border-radius: 50%;border: 10px solid #fff;display: block;margin: auto;" src="{{ URL::to('') }}/public/media/students/{{ $single_student_data -> photo }}" alt="">
 
 				<table class="table mt-4">
 					<tr>
 						<td>Name</td>
-						<td>Iftekhar Mahmud</td>
+						<td>{{ $single_student_data -> name   }}</td>
 					</tr>
 					<tr>
-						<td>Name</td>
-						<td>Iftekhar Mahmud</td>
+						<td>Email</td>
+						<td>{{ $single_student_data -> email   }}</td>
 					</tr>
 					<tr>
-						<td>Name</td>
-						<td>Iftekhar Mahmud</td>
+						<td>Phone</td>
+						<td>{{ $single_student_data -> cell   }}</td>
 					</tr>
 					<tr>
-						<td>Name</td>
-						<td>Iftekhar Mahmud</td>
+						<td>Address</td>
+						<td>{{ $single_student_data -> address   }}</td>
 					</tr>
 				</table>
 			</div>
