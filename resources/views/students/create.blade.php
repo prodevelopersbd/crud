@@ -16,26 +16,46 @@
 		<a href="{{ url('/student') }}" class="btn btn-sm btn-success">All Students</a>
 		<div class="card">
 			<div class="card-body">
-				<h2>Sign Up</h2>
-				<form action="">
+				<h2>Add New Student</h2>
+				
+					@if($errors->any())
+					<p class="alert alert-danger"> {{ $errors-> first() }} <button class="close" data-dismiss="alert">&times;</button>  </p>
+					@endif
+
+
+					@if(Session::has('success'))
+					<p class="alert alert-success"> {{ Session::get('success') }} <button class="close" data-dismiss="alert">&times;</button>  </p>
+
+					@endif
+			
+				<form action="{{ url('/student/submit') }}" method="POST" enctype="multipart/form-data">
+					@csrf
 					<div class="form-group">
 						<label for="">Name</label>
-						<input class="form-control" type="text">
+						<input name="name" class="form-control" value="{{ old('name') }}" type="text">
 					</div>
 					<div class="form-group">
 						<label for="">Email</label>
-						<input class="form-control" type="text">
+						<input name="email" class="form-control" value="{{ old('email') }}" type="text">
 					</div>
 					<div class="form-group">
 						<label for="">Cell</label>
-						<input class="form-control" type="text">
+						<input name="cell" class="form-control" value="{{ old('cell') }}" type="text">
 					</div>
 					<div class="form-group">
-						<label for="">Username</label>
-						<input class="form-control" type="text">
+						<label for="">Age</label>
+						<input name="age" class="form-control" value="{{ old('age') }}"  type="text">
 					</div>
 					<div class="form-group">
-						<input class="btn btn-primary" type="submit" value="Sign Up">
+						<label for="">Address</label>
+						<input name="address" class="form-control" value="{{ old('address') }}" type="text">
+					</div>
+					<div class="form-group">
+						<label for="">Photo</label>
+						<input name="photo" class="form-control" type="file">
+					</div>
+					<div class="form-group">
+						<input name="submit" class="btn btn-primary" type="submit" value="Submit">
 					</div>
 				</form>
 			</div>
