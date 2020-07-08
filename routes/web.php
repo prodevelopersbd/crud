@@ -18,13 +18,22 @@ Route::get('/', function () {
 });
 
 
-Route::get('/students',function(){
-	return view('students.index');
-});
+// Route::get('/students',function(){
+// 	return view('students.index');
+// });
 
-Route::get('/student/create',function(){
-	return view('students.create');
-});
-Route::get('/student/show',function(){
-	return view('students.show');
+// Route::get('/student/create',function(){
+// 	return view('students.create');
+// });
+// Route::get('/student/show',function(){
+// 	return view('students.show');
+// });
+
+
+
+Route::group(['namespace'=> 'Student'] , function(){
+	// All Student Route
+	Route::get('/student','StudentController@index');
+	Route::get('/student/create','StudentController@create');
+
 });
