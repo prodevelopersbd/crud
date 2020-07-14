@@ -60,4 +60,14 @@ class StudentController extends Controller
     	return view('students.show',compact('single_student_data'));
 
     }
+
+    // Deleting single student data
+    public function delete($id){
+
+    	$remove_student =  Student::find($id);
+    	$remove_student -> delete();    	
+    	unlink('public/media/students/'.$remove_student->photo);
+    	return redirect() -> back()->with('success','Student Removed!!');
+
+    }
 }

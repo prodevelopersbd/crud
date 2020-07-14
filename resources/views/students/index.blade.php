@@ -17,6 +17,7 @@
 		<div class="card">
 			<div class="card-body">
 				<h2>All Students</h2>
+				@include('validate')
 				<table class="table table-striped">
 					<thead>
 						<tr>
@@ -40,7 +41,8 @@
 								<td>
 									<a class="btn btn-sm btn-info" href="{{ url('/student/view') }}/{{ $single_student -> id  }}">View</a>
 									<a class="btn btn-sm btn-warning" href="#">Edit</a>
-									<a class="btn btn-sm btn-danger" href="#">Delete</a>
+									<a id="delete_data"  class="btn btn-sm btn-danger" href="{{ '
+									student/delete' }}/{{ $single_student -> id  }}">Delete</a>
 								</td>
 							</tr>
 						@endforeach

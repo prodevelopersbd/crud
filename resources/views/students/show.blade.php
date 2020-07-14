@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="{{ asset('public/assets/css/responsive.css') }}">
 </head>
 <body>
+
 	
 	
 
